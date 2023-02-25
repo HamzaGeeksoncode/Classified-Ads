@@ -8,7 +8,11 @@
                 <tr class="fw-bolder fs-6 text-gray-800 px-7">
                     <th>Sr No.</th>
                     <th>Name</th>
-                    <th>Action</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Verified</th>
+                    <th>Subscription</th>
+                    {{-- <th>Action</th> --}}
                 </tr>
             </thead>
             <tbody>
@@ -16,10 +20,14 @@
                     <tr>
                         <td>{{ ++$key }}</td>
                         <td>{{ $data->name }}</td>
-                        <td>
+                        <td>{{ $data->email }}</td>
+                        <td>{{ $data->phone ?? '' }}</td>
+                        <td>{{ $data->email_verified_at	 }}</td>
+                        <td>{{ ($data->subscription  == 0) ? 'No' : 'Yes' }}</td>
+                        {{-- <td>
                             <i class="bi bi-pencil-square fs-2x text-success"></i>
                             <i class="bi bi-trash fs-2x px-4 text-danger"></i>
-                        </td>
+                        </td> --}}
                     </tr>
                 @endforeach
             </tbody>

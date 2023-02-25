@@ -17,8 +17,10 @@ return new class extends Migration
             $table->string('google_id')->nullable();
             $table->string('facebook_id')->nullable();
             $table->string('email')->unique();
+            $table->string('phone')->nullable();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password')->nullable();
+            $table->enum('subscription',['0','1'])->default(0)->nullable();
             $table->string('avatar')->nullable();
             $table->string('avatar_original')->nullable();
             $table->rememberToken();

@@ -25,7 +25,9 @@ class User extends Authenticatable
         'google_id',
         'facebook_id',
         'avatar',
-        'avatar_original'
+        'avatar_original',
+        'phone',
+        'subscription'
     ];
 
     /**
@@ -46,4 +48,9 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function posts()
+    {
+        return $this->hasMany(AdPost::class);
+    }
 }

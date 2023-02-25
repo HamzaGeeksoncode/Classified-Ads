@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdModelController;
+use App\Http\Controllers\AdPostController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\Auth\LoginController;
@@ -45,6 +46,14 @@ Route::middleware('auth')->group(function () {
 
 
     Route::get('/users', [UserController::class,'index'])->name('users');
+
+    Route::get('/admin/adpost', [AdPostController::class,'adminIndex'])->name('adpost.admin');
+
+    Route::get('/ad-post', [AdPostController::class,'index'])->name('ad-post');
+    Route::get('/ad-post-create', [AdPostController::class,'create'])->name('ad-post.create');
+    Route::post('/ad-post-store', [AdPostController::class,'store'])->name('ad-post.store');
+    Route::get('/ad-post-edit', [AdPostController::class,'edit'])->name('ad-post.edit');
+    Route::post('/ad-post-update', [AdPostController::class,'update'])->name('ad-post.update');
 
 
 

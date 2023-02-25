@@ -10,7 +10,7 @@ class UserController extends Controller
     public function index(){
 
         $data['page_slug'] = request()->route()->uri();
-        $data['users'] = User::get();
+        $data['users'] = User::role('customer')->get();
         return view('panel.users.index' , $data);
     }
 }
