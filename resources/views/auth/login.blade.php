@@ -47,12 +47,12 @@
                             <!--begin::Heading-->
                             <div class="text-center mb-10">
                                 <!--begin::Title-->
-                                <h1 class="text-dark mb-3">Sign In to Metronic</h1>
+                                <h1 class="text-dark mb-3">Sign In to Seven Car Lounge</h1>
                                 <!--end::Title-->
                                 <!--begin::Link-->
-                                <div class="text-gray-400 fw-bold fs-4">New Here?
+                                {{-- <div class="text-gray-400 fw-bold fs-4">New Here?
                                     <a href="{{ route('register') }}" class="link-primary fw-bolder">Create an Account</a>
-                                </div>
+                                </div> --}}
                                 <!--end::Link-->
                             </div>
                             <!--begin::Heading-->
@@ -62,8 +62,7 @@
                                 <label class="form-label fs-6 fw-bolder text-dark">Email</label>
                                 <!--end::Label-->
                                 <!--begin::Input-->
-                                <input class="form-control form-control-lg form-control-solid" id="email" type="email"
-                                    @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}"
+                                <input class="form-control form-control-lg form-control-solid @error('email') is-invalid @enderror" id="email" type="email" name="email" value="{{ old('email') }}"
                                     required autocomplete="email" autofocus />
 
                                 @error('email')
@@ -110,8 +109,8 @@
                                 </div>
                                 <!--end::Wrapper-->
                                 <!--begin::Input-->
-                                <input class="form-control form-control-lg form-control-solid" type="password"
-                                    @error('password') is-invalid @enderror" name="password" required
+                                <input class="form-control form-control-lg form-control-solid @error('password') is-invalid @enderror"ss type="password"
+                                     name="password" required
                                     autocomplete="current-password" />
 
                                 @error('password')

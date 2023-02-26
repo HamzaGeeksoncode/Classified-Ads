@@ -49,8 +49,8 @@
                             <div class="menu_right">
                                 <a activeclassname="active" aria-current="page" class="f-m fw-bolder text-white active"
                                     href="#">Home</a><a href="#"><button class="f-m fw-bolder text-dark"
-                                        style="background: #dd5645;">Sell with us</button></a><a href="#"><button
-                                        id="logins" class="f-m fw-bolder">Login</button></a><a
+                                        style="background: #dd5645;">Sell with us</button></a><a href="{{ route('login') }}"><button
+                                            class="f-m fw-bolder">Login</button></a><a
                                     activeclassname="menu_active" class="f-m fw-bolder text-white"
                                     href="contact.html">Support</a>
                                 <a href="#">

@@ -48,6 +48,8 @@ Route::middleware('auth')->group(function () {
     Route::get('/users', [UserController::class,'index'])->name('users');
 
     Route::get('/admin/adpost', [AdPostController::class,'adminIndex'])->name('adpost.admin');
+    Route::get('/admin/edit-adpost/{id}', [AdPostController::class,'adpostStatus'])->name('adpost.edit');
+    Route::post('/admin/update-adpost', [AdPostController::class,'adpoststatusUpdate'])->name('adpost.update');
 
     Route::get('/ad-post', [AdPostController::class,'index'])->name('ad-post');
     Route::get('/ad-post-create', [AdPostController::class,'create'])->name('ad-post.create');

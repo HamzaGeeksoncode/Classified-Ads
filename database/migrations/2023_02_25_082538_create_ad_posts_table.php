@@ -23,6 +23,7 @@ return new class extends Migration
             $table->string('compnay_logo')->nullable();
             $table->string('area_name')->nullable();
             $table->string('description')->nullable();
+            $table->string('feature_image')->nullable();
             $table->enum('status',['active','pending','approved'])->default('pending')->nullable();
             $table->softDeletes();
             $table->timestamps();

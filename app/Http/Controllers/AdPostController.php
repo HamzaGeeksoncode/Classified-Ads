@@ -18,12 +18,30 @@ class AdPostController extends Controller
         return view('panel.adpost.index' , $data);
     }
 
+    public function adpostStatus($id){
+
+        $data = AdPost::where('id',$id)->first();
+        return response()->json($data);
+
+    }
+
+    public function adpoststatusUpdate(Request $request){
+
+        $data = AdPost::where('id',$request->id)->update([
+            'status' => $request->status
+        ]);
+        if($data){
+            return redirect('/admin/adpost')->with(['success' => 'Post Status updated successfully']);
+        }
+
+    }
+
     public function index(){
 
         $data['page_slug'] = request()->route()->uri();
         $data['category'] = Category::get();
         $data['models'] = AdModel::get();
-        $data['post'] = AdPost::get();
+        $data['post'] = AdPost::where('user_id', auth()->user()->id)->get();
         return view('panel.adpost.index' , $data);
     }
 
@@ -43,6 +61,13 @@ class AdPostController extends Controller
             $compnay_logo = $filename;
         }
 
+        if($request->file('feature_image')){
+            $file= $request->file('feature_image');
+            $filename= $file->getClientOriginalName();
+            $file-> move(public_path('public/adpost/features/image'), $filename);
+            $feature_image = $filename;
+        }
+
         $adpost = AdPost::create([
             'user_id' => auth()->user()->id,
             'category_id' => $request->category,
@@ -52,8 +77,9 @@ class AdPostController extends Controller
             'area_name' => $request->area_name,
             'type' => $request->type,
             'description' => $request->description,
+            'feature_image' => $feature_image ?? '',
             'company_name' => $request->company_name,
-            'compnay_logo' => $compnay_logo,
+            'compnay_logo' => $compnay_logo ?? '',
         ]);
         if($adpost){
 

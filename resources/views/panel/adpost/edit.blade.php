@@ -128,12 +128,26 @@
                         <div class="fv-row mb-15">
                             <!--begin::Label-->
                             <label class="fs-6 fw-bold mb-2">
-                                <span class="required">Images</span>
+                                <span class="required">Feature Image</span>
+                            </label>
+                            <!--end::Label-->
+                            <!--begin::Input-->
+                            <input type="file" class="form-control form-control-solid" placeholder="" name="feature_image"
+                                multiple required>
+                            <!--end::Input-->
+                        </div>
+                        <!--end::Input group-->
+
+                        <!--begin::Input group-->
+                        <div class="fv-row mb-15">
+                            <!--begin::Label-->
+                            <label class="fs-6 fw-bold mb-2">
+                                <span class="required">Relative Images</span>
                             </label>
                             <!--end::Label-->
                             <!--begin::Input-->
                             <input type="file" class="form-control form-control-solid" placeholder="" name="images[]"
-                                multiple>
+                                multiple required>
                             <!--end::Input-->
                         </div>
                         <!--end::Input group-->
