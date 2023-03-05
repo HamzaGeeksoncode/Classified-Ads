@@ -49,8 +49,8 @@
                             <div class="menu_right">
                                 <a activeclassname="active" aria-current="page" class="f-m fw-bolder text-white active"
                                     href="#">Home</a><a href="#"><button class="f-m fw-bolder text-dark"
-                                        style="background: #dd5645;">Sell with us</button></a><a href="{{ route('login') }}"><button
-                                            class="f-m fw-bolder">Login</button></a><a
+                                        style="background: #dd5645;">Sell with us</button></a><a
+                                    href="{{ route('login') }}"><button class="f-m fw-bolder">Login</button></a><a
                                     activeclassname="menu_active" class="f-m fw-bolder text-white"
                                     href="contact.html">Support</a>
                                 <a href="#">
@@ -66,6 +66,9 @@
                     <div class="row"></div>
                 </div>
             </div>
+
+
+
             <section class="main-cars">
                 <div class="container">
                     <div class="me-0 row">
@@ -150,8 +153,7 @@
                                     </button>
                                 </div>
                                 <div id="sendbird_chat" class="sc-1ofz4w2-7 hYdgKV">
-                                    <button data-testid="header-chat-icon" rel="nofollow"
-                                        class="sc-1fl7xgp-0 fnBhIh">
+                                    <button data-testid="header-chat-icon" rel="nofollow" class="sc-1fl7xgp-0 fnBhIh">
                                         <div class="sc-1ofz4w2-1 oqDit"><img width="18" height="18"
                                                 src="https://dbzproperty-a.akamaihd.net/frontend-web/static-resources/assets/nav-icons/my-chats.svg"
                                                 aria-label="Chats" alt="Chats" /></div>
@@ -190,6 +192,68 @@
                 </div>
             </div>
 
+            <div class="bg-black" style="min-height: 100vh;">
+                <div class="py-4 container n">
+                    <div class="row">
+                        <div class="col-md-6 col-xs-6">
+                            <h2 class="al-cars">Premium Adds</h2>
+                        </div>
+                        <!-- <div class="col-md-6 col-xs-6">
+                            <a class="tn-atom" href="#">ALL CARS</a>
+                        </div> -->
+                    </div>
+                    <div class="row">
+
+
+
+                        @foreach($users as $key => $d)
+                        @if ($d->is_primium == 'yes')
+                        <div class="g-4 col-lg-3 col-md-6 col-12">
+                            <div class="border border-secondary h-100 rounded overflow-hidden">
+                                <div class="position-relative">
+                                    <img src="{{ asset('public/adpost/features/image/' . $d->feature_image) }}"
+                                        class="w-100 border-bottom border-secondary"
+                                        style="aspect-ratio: 1.5 / 1; cursor: pointer; object-fit: cover; object-position: center center;">
+                                    <div class="car-time-and-price d-flex"></div>
+                                </div>
+                                <div class="p-3">
+                                    <div class="car-bid-shareMark d-flex align-items-center justify-content-between">
+                                        <div class="car-shareMark"><button type="button"
+                                                class="text-light btn btn-link"><i
+                                                    class="fa-solid fa-share-nodes"></i></button><button type="button"
+                                                class="text-light btn btn-link"><i
+                                                    class="fa-regular fa-bookmark"></i></button></div>
+                                        <div class="px-1 text-uppercase rounded" style="background: #dd5645;">
+                                            <span>AED {{ $d->price }}</span>
+                                        </div>
+                                    </div>
+                                    <a class="car-title-link" href="cars.html">
+                                        <h5 class="auction-card-title fw-bold text-uppercase pt-3"
+                                            style="color: white;">{{ $d->title }}</h5>
+                                    </a>
+                                    <p class="text-muted">{{ $d->description }}</p>
+
+                                    <div class="d-flex align-items-center lo lof">
+                                        <div class="text-muted d-flex align-items-center"><img
+                                                src="{{ asset('public/company/logo/' . $d->company_logo) }}" alt=""
+                                                class="me-1" style="width: 100px; height: 40px;"></div>
+                                    </div>
+                                    <div class="d-flex align-items-center lo">
+                                        <div class="text-muted d-flex align-items-center"><img
+                                                src="https://flagcdn.com/ae.svg" alt="" class="me-1"
+                                                style="width: 20px; height: 15px;"><span
+                                                class="text-capitalize">UAE</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        @endif
+                        @endforeach
+                    </div>
+
+                </div>
+            </div>
+
 
             <div class="bg-black" style="min-height: 100vh;">
                 <div class="py-4 container">
@@ -204,263 +268,50 @@
                     <div class="row">
 
 
-                        <div class="g-4 col-lg-3 col-md-6 col-12">
-                            <div class="border border-secondary h-100 rounded overflow-hidden">
-                                <div class="position-relative">
-                                    <img src="{{ asset('home/assets/images/car3.jpeg') }}"
-                                        class="w-100 border-bottom border-secondary"
-                                        style="aspect-ratio: 1.5 / 1; cursor: pointer; object-fit: cover; object-position: center center;">
-                                    <div class="car-time-and-price d-flex"></div>
-                                </div>
-                                <div class="p-3">
-                                    <div class="car-bid-shareMark d-flex align-items-center justify-content-between">
-                                        <div class="car-shareMark"><button type="button"
-                                                class="text-light btn btn-link"><i
-                                                    class="fa-solid fa-share-nodes"></i></button><button
-                                                type="button" class="text-light btn btn-link"><i
-                                                    class="fa-regular fa-bookmark"></i></button></div>
-                                        <div class="px-1 text-uppercase rounded" style="background: #dd5645;">
-                                            <span>AED 1,400,000</span></div>
-                                    </div>
-                                    <a class="car-title-link" href="cars.html">
-                                        <h5 class="auction-card-title fw-bold text-uppercase pt-3"
-                                            style="color: white;">Rolls-Royce Phantom Coupé</h5>
-                                    </a>
-                                    <p class="text-muted">ROLLS-ROYCE PHANTOM COUPÉ | 2015</p>
-                                    <div class="d-flex align-items-center">
-                                        <div class="text-muted d-flex align-items-center"><img
-                                                src="https://flagcdn.com/ae.svg" alt="" class="me-1"
-                                                style="width: 20px; height: 15px;"><span
-                                                class="text-capitalize">UAE</span></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="g-4 col-lg-3 col-md-6 col-12">
-                            <div class="border border-secondary h-100 rounded overflow-hidden">
-                                <div class="position-relative">
-                                    <img src="{{ asset('home/assets/images/car2.jpeg') }}"
-                                        class="w-100 border-bottom border-secondary"
-                                        style="aspect-ratio: 1.5 / 1; cursor: pointer; object-fit: cover; object-position: center center;">
-                                    <div class="car-time-and-price d-flex"></div>
-                                </div>
-                                <div class="p-3">
-                                    <div class="car-bid-shareMark d-flex align-items-center justify-content-between">
-                                        <div class="car-shareMark"><button type="button"
-                                                class="text-light btn btn-link"><i
-                                                    class="fa-solid fa-share-nodes"></i></button><button
-                                                type="button" class="text-light btn btn-link"><i
-                                                    class="fa-regular fa-bookmark"></i></button></div>
-                                        <div class="px-1 text-uppercase rounded" style="background: #dd5645;">
-                                            <span>AED 1,150,000</span></div>
-                                    </div>
-                                    <a class="car-title-link" href="cars.html">
-                                        <h5 class="auction-card-title fw-bold text-uppercase pt-3"
-                                            style="color: white;">bentley fliyng spur</h5>
-                                    </a>
-                                    <p class="text-muted">BENTLEY FLIYNG SPUR | FIRST EDITION | 2020</p>
-                                    <div class="d-flex align-items-center">
-                                        <div class="text-muted d-flex align-items-center"><img
-                                                src="https://flagcdn.com/ae.svg" alt="" class="me-1"
-                                                style="width: 20px; height: 15px;"><span
-                                                class="text-capitalize">UAE</span></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="g-4 col-lg-3 col-md-6 col-12">
-                            <div class="border border-secondary h-100 rounded overflow-hidden">
-                                <div class="position-relative">
-                                    <img src="{{ asset('home/assets/images/car1.jpeg') }}"
-                                        class="w-100 border-bottom border-secondary"
-                                        style="aspect-ratio: 1.5 / 1; cursor: pointer; object-fit: cover; object-position: center center;">
-                                    <div class="car-time-and-price d-flex"></div>
-                                </div>
-                                <div class="p-3">
-                                    <div class="car-bid-shareMark d-flex align-items-center justify-content-between">
-                                        <div class="car-shareMark"><button type="button"
-                                                class="text-light btn btn-link"><i
-                                                    class="fa-solid fa-share-nodes"></i></button><button
-                                                type="button" class="text-light btn btn-link"><i
-                                                    class="fa-regular fa-bookmark"></i></button></div>
-                                        <div class="px-1 text-uppercase rounded" style="background: #dd5645;">
-                                            <span>AED 1,184,945</span></div>
-                                    </div>
-                                    <a class="car-title-link" href="cars.html">
-                                        <h5 class="auction-card-title fw-bold text-uppercase pt-3"
-                                            style="color: white;">Porsche 911 turbo s</h5>
-                                    </a>
-                                    <p class="text-muted">Porsche 911 Turbo S | 2022</p>
-                                    <div class="d-flex align-items-center">
-                                        <div class="text-muted d-flex align-items-center"><img
-                                                src="https://flagcdn.com/ae.svg" alt="" class="me-1"
-                                                style="width: 20px; height: 15px;"><span
-                                                class="text-capitalize">UAE</span></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="g-4 col-lg-3 col-md-6 col-12">
-                            <div class="border border-secondary h-100 rounded overflow-hidden">
-                                <div class="position-relative">
-                                    <img src="{{ asset('home/assets/images/car4.jpeg') }}"
-                                        class="w-100 border-bottom border-secondary"
-                                        style="aspect-ratio: 1.5 / 1; cursor: pointer; object-fit: cover; object-position: center center;">
-                                    <div class="car-time-and-price d-flex"></div>
-                                </div>
-                                <div class="p-3">
-                                    <div class="car-bid-shareMark d-flex align-items-center justify-content-between">
-                                        <div class="car-shareMark"><button type="button"
-                                                class="text-light btn btn-link"><i
-                                                    class="fa-solid fa-share-nodes"></i></button><button
-                                                type="button" class="text-light btn btn-link"><i
-                                                    class="fa-regular fa-bookmark"></i></button></div>
-                                        <div class="px-1 text-uppercase rounded" style="background: #dd5645;">
-                                            <span>AED 949,966</span></div>
-                                    </div>
-                                    <a class="car-title-link" href="cars.html">
-                                        <h5 class="auction-card-title fw-bold text-uppercase pt-3"
-                                            style="color: white;">Porsche 356 B 1600 roadster</h5>
-                                    </a>
-                                    <p class="text-muted">Porsche 356 B 1600 Roadster | 1960</p>
-                                    <div class="d-flex align-items-center">
-                                        <div class="text-muted d-flex align-items-center"><img
-                                                src="https://flagcdn.com/ae.svg" alt="" class="me-1"
-                                                style="width: 20px; height: 15px;"><span
-                                                class="text-capitalize">UAE</span></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="g-4 col-lg-3 col-md-6 col-12">
-                            <div class="border border-secondary h-100 rounded overflow-hidden">
-                                <div class="position-relative">
-                                    <img src="{{ asset('home/assets/images/c5.jpg') }}"
-                                        class="w-100 border-bottom border-secondary"
-                                        style="aspect-ratio: 1.5 / 1; cursor: pointer; object-fit: cover; object-position: center center;">
-                                    <div class="car-time-and-price d-flex"></div>
-                                </div>
-                                <div class="p-3">
-                                    <div class="car-bid-shareMark d-flex align-items-center justify-content-between">
-                                        <div class="car-shareMark"><button type="button"
-                                                class="text-light btn btn-link"><i
-                                                    class="fa-solid fa-share-nodes"></i></button><button
-                                                type="button" class="text-light btn btn-link"><i
-                                                    class="fa-regular fa-bookmark"></i></button></div>
-                                        <div class="px-1 text-uppercase rounded" style="background: #dd5645;">
-                                            <span>AED 559,983</span></div>
-                                    </div>
-                                    <a class="car-title-link" href="cars.html">
-                                        <h5 class="auction-card-title fw-bold text-uppercase pt-3"
-                                            style="color: white;">Mercedes AMG GT 53</h5>
-                                    </a>
-                                    <p class="text-muted">MERCEDES AMG GT 53 | 2020</p>
-                                    <div class="d-flex align-items-center">
-                                        <div class="text-muted d-flex align-items-center"><img
-                                                src="https://flagcdn.com/ae.svg" alt="" class="me-1"
-                                                style="width: 20px; height: 15px;"><span
-                                                class="text-capitalize">UAE</span></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="g-4 col-lg-3 col-md-6 col-12">
-                            <div class="border border-secondary h-100 rounded overflow-hidden">
-                                <div class="position-relative">
-                                    <img src="{{ asset('home/assets/images/c6.jpg') }}"
-                                        class="w-100 border-bottom border-secondary"
-                                        style="aspect-ratio: 1.5 / 1; cursor: pointer; object-fit: cover; object-position: center center;">
-                                    <div class="car-time-and-price d-flex"></div>
-                                </div>
-                                <div class="p-3">
-                                    <div class="car-bid-shareMark d-flex align-items-center justify-content-between">
-                                        <div class="car-shareMark"><button type="button"
-                                                class="text-light btn btn-link"><i
-                                                    class="fa-solid fa-share-nodes"></i></button><button
-                                                type="button" class="text-light btn btn-link"><i
-                                                    class="fa-regular fa-bookmark"></i></button></div>
-                                        <div class="px-1 text-uppercase rounded" style="background: #dd5645;">
-                                            <span>AED 3,495,000</span></div>
-                                    </div>
-                                    <a class="car-title-link" href="cars.html">
-                                        <h5 class="auction-card-title fw-bold text-uppercase pt-3"
-                                            style="color: white;">Mercedes Maybach G650</h5>
-                                    </a>
-                                    <p class="text-muted">MERCEDES MAYBACH G650 | Landaulet | 2018</p>
-                                    <div class="d-flex align-items-center">
-                                        <div class="text-muted d-flex align-items-center"><img
-                                                src="https://flagcdn.com/ae.svg" alt="" class="me-1"
-                                                style="width: 20px; height: 15px;"><span
-                                                class="text-capitalize">UAE</span></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="g-4 col-lg-3 col-md-6 col-12">
-                            <div class="border border-secondary h-100 rounded overflow-hidden">
-                                <div class="position-relative">
-                                    <img src="{{ asset('home/assets/images/c7.jpg') }}"
-                                        class="w-100 border-bottom border-secondary"
-                                        style="aspect-ratio: 1.5 / 1; cursor: pointer; object-fit: cover; object-position: center center;">
-                                    <div class="car-time-and-price d-flex"></div>
-                                </div>
-                                <div class="p-3">
-                                    <div class="car-bid-shareMark d-flex align-items-center justify-content-between">
-                                        <div class="car-shareMark"><button type="button"
-                                                class="text-light btn btn-link"><i
-                                                    class="fa-solid fa-share-nodes"></i></button><button
-                                                type="button" class="text-light btn btn-link"><i
-                                                    class="fa-regular fa-bookmark"></i></button></div>
-                                        <div class="px-1 text-uppercase rounded" style="background: #dd5645;">
-                                            <span>AED 1,125,000</span></div>
-                                    </div>
-                                    <a class="car-title-link" href="cars.html">
-                                        <h5 class="auction-card-title fw-bold text-uppercase pt-3"
-                                            style="color: white;">McLaren GT</h5>
-                                    </a>
-                                    <p class="text-muted">MCLAREN GT | Brand New | 2021</p>
-                                    <div class="d-flex align-items-center">
-                                        <div class="text-muted d-flex align-items-center"><img
-                                                src="https://flagcdn.com/ae.svg" alt="" class="me-1"
-                                                style="width: 20px; height: 15px;"><span
-                                                class="text-capitalize">UAE</span></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="g-4 col-lg-3 col-md-6 col-12">
-                            <div class="border border-secondary h-100 rounded overflow-hidden">
-                                <div class="position-relative">
-                                    <img src="{{ asset('home/assets/images/c8.jpg') }}"
-                                        class="w-100 border-bottom border-secondary"
-                                        style="aspect-ratio: 1.5 / 1; cursor: pointer; object-fit: cover; object-position: center center;">
-                                    <div class="car-time-and-price d-flex"></div>
-                                </div>
-                                <div class="p-3">
-                                    <div class="car-bid-shareMark d-flex align-items-center justify-content-between">
-                                        <div class="car-shareMark"><button type="button"
-                                                class="text-light btn btn-link"><i
-                                                    class="fa-solid fa-share-nodes"></i></button><button
-                                                type="button" class="text-light btn btn-link"><i
-                                                    class="fa-regular fa-bookmark"></i></button></div>
-                                        <div class="px-1 text-uppercase rounded" style="background: #dd5645;">
-                                            <span>AED 2,800,000</span></div>
-                                    </div>
-                                    <a class="car-title-link" href="cars.html">
-                                        <h5 class="auction-card-title fw-bold text-uppercase pt-3"
-                                            style="color: white;">Rolls Royce Cullinan</h5>
-                                    </a>
-                                    <p class="text-muted">ROLLS ROYCE CULLINAN | Black Badge | 2022</p>
-                                    <div class="d-flex align-items-center">
-                                        <div class="text-muted d-flex align-items-center"><img
-                                                src="https://flagcdn.com/ae.svg" alt="" class="me-1"
-                                                style="width: 20px; height: 15px;"><span
-                                                class="text-capitalize">UAE</span></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
 
+                        @foreach($users as $key => $d)
+                        @if ($d->status == 'active' && $d->type == 'cars')
+                        <div class="g-4 col-lg-3 col-md-6 col-12">
+                            <div class="border border-secondary h-100 rounded overflow-hidden">
+                                <div class="position-relative">
+                                    <img src="{{ asset('public/adpost/features/image/' . $d->feature_image) }}"
+                                        class="w-100 border-bottom border-secondary"
+                                        style="aspect-ratio: 1.5 / 1; cursor: pointer; object-fit: cover; object-position: center center;">
+                                    <div class="car-time-and-price d-flex"></div>
+                                </div>
+                                <div class="p-3">
+                                    <div class="car-bid-shareMark d-flex align-items-center justify-content-between">
+                                        <div class="car-shareMark"><button type="button"
+                                                class="text-light btn btn-link"><i
+                                                    class="fa-solid fa-share-nodes"></i></button><button type="button"
+                                                class="text-light btn btn-link"><i
+                                                    class="fa-regular fa-bookmark"></i></button></div>
+                                        <div class="px-1 text-uppercase rounded" style="background: #dd5645;">
+                                            <span>AED {{ $d->price }}</span>
+                                        </div>
+                                    </div>
+                                    <a class="car-title-link" href="cars.html">
+                                        <h5 class="auction-card-title fw-bold text-uppercase pt-3"
+                                            style="color: white;">{{ $d->title }}</h5>
+                                    </a>
+                                    <p class="text-muted">{{ $d->description }}</p>
+
+                                    <div class="d-flex align-items-center lo lof">
+                                        <div class="text-muted d-flex align-items-center"><img
+                                                src="{{ asset('public/company/logo/' . $d->company_logo) }}" alt=""
+                                                class="me-1" style="width: 100px; height: 40px;"></div>
+                                    </div>
+                                    <div class="d-flex align-items-center lo">
+                                        <div class="text-muted d-flex align-items-center"><img
+                                                src="https://flagcdn.com/ae.svg" alt="" class="me-1"
+                                                style="width: 20px; height: 15px;"><span
+                                                class="text-capitalize">UAE</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        @endif
+                        @endforeach
                     </div>
 
                 </div>
@@ -480,376 +331,164 @@
                     <div class="row">
 
 
-                        <div class="g-4 col-lg-3 col-md-6 col-12">
-                            <div class="border border-secondary h-100 rounded overflow-hidden">
-                                <div class="position-relative">
-                                    <img src="{{ asset('home/assets/images/b1.jpg') }}"
-                                        class="w-100 border-bottom border-secondary"
-                                        style="aspect-ratio: 1.5 / 1; cursor: pointer; object-fit: cover; object-position: center center;">
-                                    <div class="car-time-and-price d-flex"></div>
-                                </div>
-                                <div class="p-3">
-                                    <div class="car-bid-shareMark d-flex align-items-center justify-content-between">
-                                        <div class="car-shareMark"><button type="button"
-                                                class="text-light btn btn-link"><i
-                                                    class="fa-solid fa-share-nodes"></i></button><button
-                                                type="button" class="text-light btn btn-link"><i
-                                                    class="fa-regular fa-bookmark"></i></button></div>
-                                        <div class="px-1 text-uppercase rounded" style="background: #dd5645;">
-                                            <span>AED 1,400,000</span></div>
-                                    </div>
-                                    <a class="car-title-link" href="cars.html">
-                                        <h5 class="auction-card-title fw-bold text-uppercase pt-3"
-                                            style="color: white;">Rolls-Royce Phantom Coupé</h5>
-                                    </a>
-                                    <p class="text-muted">ROLLS-ROYCE PHANTOM COUPÉ | 2015</p>
-                                    <div class="d-flex align-items-center">
-                                        <div class="text-muted d-flex align-items-center"><img
-                                                src="https://flagcdn.com/ae.svg" alt="" class="me-1"
-                                                style="width: 20px; height: 15px;"><span
-                                                class="text-capitalize">UAE</span></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="g-4 col-lg-3 col-md-6 col-12">
-                            <div class="border border-secondary h-100 rounded overflow-hidden">
-                                <div class="position-relative">
-                                    <img src="{{ asset('home/assets/images/b2.jpg ') }}"
-                                        class="w-100 border-bottom border-secondary"
-                                        style="aspect-ratio: 1.5 / 1; cursor: pointer; object-fit: cover; object-position: center center;">
-                                    <div class="car-time-and-price d-flex"></div>
-                                </div>
-                                <div class="p-3">
-                                    <div class="car-bid-shareMark d-flex align-items-center justify-content-between">
-                                        <div class="car-shareMark"><button type="button"
-                                                class="text-light btn btn-link"><i
-                                                    class="fa-solid fa-share-nodes"></i></button><button
-                                                type="button" class="text-light btn btn-link"><i
-                                                    class="fa-regular fa-bookmark"></i></button></div>
-                                        <div class="px-1 text-uppercase rounded" style="background: #dd5645;">
-                                            <span>AED 1,150,000</span></div>
-                                    </div>
-                                    <a class="car-title-link" href="cars.html">
-                                        <h5 class="auction-card-title fw-bold text-uppercase pt-3"
-                                            style="color: white;">bentley fliyng spur</h5>
-                                    </a>
-                                    <p class="text-muted">BENTLEY FLIYNG SPUR | FIRST EDITION | 2020</p>
-                                    <div class="d-flex align-items-center">
-                                        <div class="text-muted d-flex align-items-center"><img
-                                                src="https://flagcdn.com/ae.svg" alt="" class="me-1"
-                                                style="width: 20px; height: 15px;"><span
-                                                class="text-capitalize">UAE</span></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="g-4 col-lg-3 col-md-6 col-12">
-                            <div class="border border-secondary h-100 rounded overflow-hidden">
-                                <div class="position-relative">
-                                    <img src="{{ asset('home/assets/images/b3.png') }}"
-                                        class="w-100 border-bottom border-secondary"
-                                        style="aspect-ratio: 1.5 / 1; cursor: pointer; object-fit: cover; object-position: center center;">
-                                    <div class="car-time-and-price d-flex"></div>
-                                </div>
-                                <div class="p-3">
-                                    <div class="car-bid-shareMark d-flex align-items-center justify-content-between">
-                                        <div class="car-shareMark"><button type="button"
-                                                class="text-light btn btn-link"><i
-                                                    class="fa-solid fa-share-nodes"></i></button><button
-                                                type="button" class="text-light btn btn-link"><i
-                                                    class="fa-regular fa-bookmark"></i></button></div>
-                                        <div class="px-1 text-uppercase rounded" style="background: #dd5645;">
-                                            <span>AED 1,184,945</span></div>
-                                    </div>
-                                    <a class="car-title-link" href="cars.html">
-                                        <h5 class="auction-card-title fw-bold text-uppercase pt-3"
-                                            style="color: white;">Porsche 911 turbo s</h5>
-                                    </a>
-                                    <p class="text-muted">Porsche 911 Turbo S | 2022</p>
-                                    <div class="d-flex align-items-center">
-                                        <div class="text-muted d-flex align-items-center"><img
-                                                src="https://flagcdn.com/ae.svg" alt="" class="me-1"
-                                                style="width: 20px; height: 15px;"><span
-                                                class="text-capitalize">UAE</span></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="g-4 col-lg-3 col-md-6 col-12">
-                            <div class="border border-secondary h-100 rounded overflow-hidden">
-                                <div class="position-relative">
-                                    <img src="{{ asset('home/assets/images/b4.jpg') }}"
-                                        class="w-100 border-bottom border-secondary"
-                                        style="aspect-ratio: 1.5 / 1; cursor: pointer; object-fit: cover; object-position: center center;">
-                                    <div class="car-time-and-price d-flex"></div>
-                                </div>
-                                <div class="p-3">
-                                    <div class="car-bid-shareMark d-flex align-items-center justify-content-between">
-                                        <div class="car-shareMark"><button type="button"
-                                                class="text-light btn btn-link"><i
-                                                    class="fa-solid fa-share-nodes"></i></button><button
-                                                type="button" class="text-light btn btn-link"><i
-                                                    class="fa-regular fa-bookmark"></i></button></div>
-                                        <div class="px-1 text-uppercase rounded" style="background: #dd5645;">
-                                            <span>AED 949,966</span></div>
-                                    </div>
-                                    <a class="car-title-link" href="cars.html">
-                                        <h5 class="auction-card-title fw-bold text-uppercase pt-3"
-                                            style="color: white;">Porsche 356 B 1600 roadster</h5>
-                                    </a>
-                                    <p class="text-muted">Porsche 356 B 1600 Roadster | 1960</p>
-                                    <div class="d-flex align-items-center">
-                                        <div class="text-muted d-flex align-items-center"><img
-                                                src="https://flagcdn.com/ae.svg" alt="" class="me-1"
-                                                style="width: 20px; height: 15px;"><span
-                                                class="text-capitalize">UAE</span></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="g-4 col-lg-3 col-md-6 col-12">
-                            <div class="border border-secondary h-100 rounded overflow-hidden">
-                                <div class="position-relative">
-                                    <img src="{{ asset('home/assets/images/b5.jpg') }}"
-                                        class="w-100 border-bottom border-secondary"
-                                        style="aspect-ratio: 1.5 / 1; cursor: pointer; object-fit: cover; object-position: center center;">
-                                    <div class="car-time-and-price d-flex"></div>
-                                </div>
-                                <div class="p-3">
-                                    <div class="car-bid-shareMark d-flex align-items-center justify-content-between">
-                                        <div class="car-shareMark"><button type="button"
-                                                class="text-light btn btn-link"><i
-                                                    class="fa-solid fa-share-nodes"></i></button><button
-                                                type="button" class="text-light btn btn-link"><i
-                                                    class="fa-regular fa-bookmark"></i></button></div>
-                                        <div class="px-1 text-uppercase rounded" style="background: #dd5645;">
-                                            <span>AED 559,983</span></div>
-                                    </div>
-                                    <a class="car-title-link" href="cars.html">
-                                        <h5 class="auction-card-title fw-bold text-uppercase pt-3"
-                                            style="color: white;">Mercedes AMG GT 53</h5>
-                                    </a>
-                                    <p class="text-muted">MERCEDES AMG GT 53 | 2020</p>
-                                    <div class="d-flex align-items-center">
-                                        <div class="text-muted d-flex align-items-center"><img
-                                                src="https://flagcdn.com/ae.svg" alt="" class="me-1"
-                                                style="width: 20px; height: 15px;"><span
-                                                class="text-capitalize">UAE</span></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="g-4 col-lg-3 col-md-6 col-12">
-                            <div class="border border-secondary h-100 rounded overflow-hidden">
-                                <div class="position-relative">
-                                    <img src="{{ asset('home/assets/images/b6.jpg ') }}"
-                                        class="w-100 border-bottom border-secondary"
-                                        style="aspect-ratio: 1.5 / 1; cursor: pointer; object-fit: cover; object-position: center center;">
-                                    <div class="car-time-and-price d-flex"></div>
-                                </div>
-                                <div class="p-3">
-                                    <div class="car-bid-shareMark d-flex align-items-center justify-content-between">
-                                        <div class="car-shareMark"><button type="button"
-                                                class="text-light btn btn-link"><i
-                                                    class="fa-solid fa-share-nodes"></i></button><button
-                                                type="button" class="text-light btn btn-link"><i
-                                                    class="fa-regular fa-bookmark"></i></button></div>
-                                        <div class="px-1 text-uppercase rounded" style="background: #dd5645;">
-                                            <span>AED 3,495,000</span></div>
-                                    </div>
-                                    <a class="car-title-link" href="cars.html">
-                                        <h5 class="auction-card-title fw-bold text-uppercase pt-3"
-                                            style="color: white;">Mercedes Maybach G650</h5>
-                                    </a>
-                                    <p class="text-muted">MERCEDES MAYBACH G650 | Landaulet | 2018</p>
-                                    <div class="d-flex align-items-center">
-                                        <div class="text-muted d-flex align-items-center"><img
-                                                src="https://flagcdn.com/ae.svg" alt="" class="me-1"
-                                                style="width: 20px; height: 15px;"><span
-                                                class="text-capitalize">UAE</span></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="g-4 col-lg-3 col-md-6 col-12">
-                            <div class="border border-secondary h-100 rounded overflow-hidden">
-                                <div class="position-relative">
-                                    <img src="{{ asset('home/assets/images/b7.jpg') }}"
-                                        class="w-100 border-bottom border-secondary"
-                                        style="aspect-ratio: 1.5 / 1; cursor: pointer; object-fit: cover; object-position: center center;">
-                                    <div class="car-time-and-price d-flex"></div>
-                                </div>
-                                <div class="p-3">
-                                    <div class="car-bid-shareMark d-flex align-items-center justify-content-between">
-                                        <div class="car-shareMark"><button type="button"
-                                                class="text-light btn btn-link"><i
-                                                    class="fa-solid fa-share-nodes"></i></button><button
-                                                type="button" class="text-light btn btn-link"><i
-                                                    class="fa-regular fa-bookmark"></i></button></div>
-                                        <div class="px-1 text-uppercase rounded" style="background: #dd5645;">
-                                            <span>AED 1,125,000</span></div>
-                                    </div>
-                                    <a class="car-title-link" href="cars.html">
-                                        <h5 class="auction-card-title fw-bold text-uppercase pt-3"
-                                            style="color: white;">McLaren GT</h5>
-                                    </a>
-                                    <p class="text-muted">MCLAREN GT | Brand New | 2021</p>
-                                    <div class="d-flex align-items-center">
-                                        <div class="text-muted d-flex align-items-center"><img
-                                                src="https://flagcdn.com/ae.svg" alt="" class="me-1"
-                                                style="width: 20px; height: 15px;"><span
-                                                class="text-capitalize">UAE</span></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="g-4 col-lg-3 col-md-6 col-12">
-                            <div class="border border-secondary h-100 rounded overflow-hidden">
-                                <div class="position-relative">
-                                    <img src="{{ asset('home/assets/images/b8.jpg') }}""
-                                        class="w-100 border-bottom border-secondary"
-                                        style="aspect-ratio: 1.5 / 1; cursor: pointer; object-fit: cover; object-position: center center;">
-                                    <div class="car-time-and-price d-flex"></div>
-                                </div>
-                                <div class="p-3">
-                                    <div class="car-bid-shareMark d-flex align-items-center justify-content-between">
-                                        <div class="car-shareMark"><button type="button"
-                                                class="text-light btn btn-link"><i
-                                                    class="fa-solid fa-share-nodes"></i></button><button
-                                                type="button" class="text-light btn btn-link"><i
-                                                    class="fa-regular fa-bookmark"></i></button></div>
-                                        <div class="px-1 text-uppercase rounded" style="background: #dd5645;">
-                                            <span>AED 2,800,000</span></div>
-                                    </div>
-                                    <a class="car-title-link" href="cars.html">
-                                        <h5 class="auction-card-title fw-bold text-uppercase pt-3"
-                                            style="color: white;">Rolls Royce Cullinan</h5>
-                                    </a>
-                                    <p class="text-muted">ROLLS ROYCE CULLINAN | Black Badge | 2022</p>
-                                    <div class="d-flex align-items-center">
-                                        <div class="text-muted d-flex align-items-center"><img
-                                                src="https://flagcdn.com/ae.svg" alt="" class="me-1"
-                                                style="width: 20px; height: 15px;"><span
-                                                class="text-capitalize">UAE</span></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
 
+                        @foreach($users as $key => $d)
+                        @if ($d->status == 'active' && $d->type == 'bike')
+                        <div class="g-4 col-lg-3 col-md-6 col-12">
+                            <div class="border border-secondary h-100 rounded overflow-hidden">
+                                <div class="position-relative">
+                                    <img src="{{ asset('public/adpost/features/image/' . $d->feature_image) }}"
+                                        class="w-100 border-bottom border-secondary"
+                                        style="aspect-ratio: 1.5 / 1; cursor: pointer; object-fit: cover; object-position: center center;">
+                                    <div class="car-time-and-price d-flex"></div>
+                                </div>
+                                <div class="p-3">
+                                    <div class="car-bid-shareMark d-flex align-items-center justify-content-between">
+                                        <div class="car-shareMark"><button type="button"
+                                                class="text-light btn btn-link"><i
+                                                    class="fa-solid fa-share-nodes"></i></button><button type="button"
+                                                class="text-light btn btn-link"><i
+                                                    class="fa-regular fa-bookmark"></i></button></div>
+                                        <div class="px-1 text-uppercase rounded" style="background: #dd5645;">
+                                            <span>AED {{ $d->price }}</span>
+                                        </div>
+                                    </div>
+                                    <a class="car-title-link" href="cars.html">
+                                        <h5 class="auction-card-title fw-bold text-uppercase pt-3"
+                                            style="color: white;">{{ $d->title }}</h5>
+                                    </a>
+                                    <p class="text-muted">{{ $d->description }}</p>
+
+                                    <div class="d-flex align-items-center lo lof">
+                                        <div class="text-muted d-flex align-items-center"><img
+                                                src="{{ asset('public/company/logo/' . $d->company_logo) }}" alt=""
+                                                class="me-1" style="width: 100px; height: 40px;"></div>
+                                    </div>
+                                    <div class="d-flex align-items-center lo">
+                                        <div class="text-muted d-flex align-items-center"><img
+                                                src="https://flagcdn.com/ae.svg" alt="" class="me-1"
+                                                style="width: 20px; height: 15px;"><span
+                                                class="text-capitalize">UAE</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        @endif
+                        @endforeach
                     </div>
 
                 </div>
             </div>
 
-
-
-
-            <div class="footer_bg border-top border-secondary">
-                <div class="container">
-                    <div class="footer_row row">
-                        <div class="col-md-3">
-                            <div class="footer_text">
-                                <div class="footer_logo"><img class="img-fluid"
-                                        src="{{ asset('home/assets/images/logo.png ') }}" alt=""></div>
-                                <p class="text-center f-s"><a class="email_info text-white"
-                                        href="$">info@abc.com</a></p>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="footer_text">
-                                <div class="footer_heading">
-                                    <h2 class="f-m">AUCTIONS</h2>
-                                </div>
-                                <div class="footer_menu f-s">
-                                    <li><a class="text-white" href="#">Live Auctions</a></li>
-                                    <li><a class="text-white" href="#">Sold</a></li>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="footer_text">
-                                <div class="footer_heading">
-                                    <h2 class="f-m">SELLING</h2>
-                                </div>
-                                <div class="footer_menu f-s">
-                                    <li><a class="text-white" href="#">Sell With Us</a></li>
-                                    <li><a class="text-white" href="#">About Us</a></li>
-                                    <li><a class="text-white" href="#">Selling Guide</a></li>
-                                    <li><a class="text-white" href="#">FAQs</a></li>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="footer_text">
-                                <div class="footer_heading">
-                                    <h2 class="f-m">company</h2>
-                                </div>
-                                <div class="footer_menu f-s">
-                                    <li><a class="text-white" href="#">Blog</a></li>
-                                    <li><a class="text-white" href="#">Privacy and Policy</a></li>
-                                    <li><a class="text-white" href="#">Terms and Conditions</a></li>
-                                    <li><a class="text-white" href="#">Contact Us</a></li>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="footer_bottom">
-                    <div class="container">
-                        <div class="row">
-                            <div class="f-s col-md-6">
-                                <p>all rights reserved, 2021</p>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="social_icon"><a target="_blank" href="#"><i
-                                            class="fa-brands text-white fa-facebook-f"></i></a><a target="_blank"
-                                        href="#"><i class="fa-brands text-white fa-twitter"></i></a><a
-                                        target="_blank" href="#"><i
-                                            class="fa-brands text-white fa-instagram"></i></a><a target="_blank"
-                                        href="https://sa.linkedin.com/company/seven-car-lounge"><i
-                                            class="fa-brands text-white fa-linkedin-in"></i></a><a target="_blank"
-                                        href="#"><i class="fa-brands text-white fa-youtube"></i></a></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="container me modall animate">
-
-                    <!-- upper button section to select
-                       the login or signup form -->
-                    <div class="sliders"></div>
-                    <div class="btn">
-
-                        <button class="close">&times;</button>
-                        <button class="login">Login</button>
-                        <button class="signup">Signup</button>
-                    </div>
-
-                    <!-- Form section that contains the
-                       login and the signup form -->
-                    <div class="form-section">
-
-                        <!-- login form -->
-                        <div class="login-box">
-                            <input type="email" class="email ele" placeholder="youremail@email.com">
-                            <input type="password" class="password ele" placeholder="password">
-                            <button class="clkbtn">Login</button>
-                        </div>
-
-                        <!-- signup form -->
-                        <div class="signup-box">
-                            <input type="text" class="name ele" placeholder="Enter your name">
-                            <input type="email" class="email ele" placeholder="youremail@email.com">
-                            <input type="password" class="password ele" placeholder="password">
-                            <input type="password" class="password ele" placeholder="Confirm password">
-                            <button class="clkbtn">Signup</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="Toastify"></div>
         </div>
+    </div>
+
+
+
+
+    <div class="footer_bg border-top border-secondary">
+        <div class="container">
+            <div class="footer_row row">
+                <div class="col-md-3">
+                    <div class="footer_text">
+                        <div class="footer_logo"><img class="img-fluid"
+                                src="{{ asset('home/assets/images/logo.png ') }}" alt=""></div>
+                        <p class="text-center f-s"><a class="email_info text-white" href="$">info@abc.com</a></p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="footer_text">
+                        <div class="footer_heading">
+                            <h2 class="f-m">AUCTIONS</h2>
+                        </div>
+                        <div class="footer_menu f-s">
+                            <li><a class="text-white" href="#">Live Auctions</a></li>
+                            <li><a class="text-white" href="#">Sold</a></li>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="footer_text">
+                        <div class="footer_heading">
+                            <h2 class="f-m">SELLING</h2>
+                        </div>
+                        <div class="footer_menu f-s">
+                            <li><a class="text-white" href="#">Sell With Us</a></li>
+                            <li><a class="text-white" href="#">About Us</a></li>
+                            <li><a class="text-white" href="#">Selling Guide</a></li>
+                            <li><a class="text-white" href="#">FAQs</a></li>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="footer_text">
+                        <div class="footer_heading">
+                            <h2 class="f-m">company</h2>
+                        </div>
+                        <div class="footer_menu f-s">
+                            <li><a class="text-white" href="#">Blog</a></li>
+                            <li><a class="text-white" href="#">Privacy and Policy</a></li>
+                            <li><a class="text-white" href="#">Terms and Conditions</a></li>
+                            <li><a class="text-white" href="#">Contact Us</a></li>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer_bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="f-s col-md-6">
+                        <p>all rights reserved, 2021</p>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="social_icon"><a target="_blank" href="#"><i
+                                    class="fa-brands text-white fa-facebook-f"></i></a><a target="_blank" href="#"><i
+                                    class="fa-brands text-white fa-twitter"></i></a><a target="_blank" href="#"><i
+                                    class="fa-brands text-white fa-instagram"></i></a><a target="_blank"
+                                href="https://sa.linkedin.com/company/seven-car-lounge"><i
+                                    class="fa-brands text-white fa-linkedin-in"></i></a><a target="_blank" href="#"><i
+                                    class="fa-brands text-white fa-youtube"></i></a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container me modall animate">
+
+            <!-- upper button section to select
+                       the login or signup form -->
+            <div class="sliders"></div>
+            <div class="btn">
+
+                <button class="close">&times;</button>
+                <button class="login">Login</button>
+                <button class="signup">Signup</button>
+            </div>
+
+            <!-- Form section that contains the
+                       login and the signup form -->
+            <div class="form-section">
+
+                <!-- login form -->
+                <div class="login-box">
+                    <input type="email" class="email ele" placeholder="youremail@email.com">
+                    <input type="password" class="password ele" placeholder="password">
+                    <button class="clkbtn">Login</button>
+                </div>
+
+                <!-- signup form -->
+                <div class="signup-box">
+                    <input type="text" class="name ele" placeholder="Enter your name">
+                    <input type="email" class="email ele" placeholder="youremail@email.com">
+                    <input type="password" class="password ele" placeholder="password">
+                    <input type="password" class="password ele" placeholder="Confirm password">
+                    <button class="clkbtn">Signup</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="Toastify"></div>
+    </div>
     </div>
 </body>
 

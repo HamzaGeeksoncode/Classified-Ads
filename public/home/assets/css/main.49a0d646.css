@@ -4,11 +4,6 @@ body{
     -moz-osx-font-smoothing:grayscale;
     font-family:Futura PT,sans-serif!important
 }
-body{
-    -webkit-font-smoothing:antialiased;
-    -moz-osx-font-smoothing:grayscale;
-    font-family:Futura PT,sans-serif!important
-}
 input{
     font-family:Lato,sans-serif!important
 }
@@ -14708,3 +14703,12 @@ button.close {
     from {transform: scale(0)} 
     to {transform: scale(1)}
   }
+  .d-flex.align-items-center.lo {
+    display: inline-block !important;
+}
+
+.d-flex.align-items-center.lo.lof {
+    width: 60%;
+    float: left;
+    margin-top: -6px;
+}

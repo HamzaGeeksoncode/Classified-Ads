@@ -76,6 +76,7 @@ class AdPostController extends Controller
             'city' => $request->city,
             'area_name' => $request->area_name,
             'type' => $request->type,
+            'price' => $request->price,
             'description' => $request->description,
             'feature_image' => $feature_image ?? '',
             'company_name' => $request->company_name,

@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AdModelController;
 use App\Http\Controllers\AdPostController;
 use App\Http\Controllers\CategoryController;
@@ -20,9 +21,13 @@ use App\Http\Controllers\UserController;
 |
 */
 
-Route::get('/', function () {
-    return view('home.index');
-})->name('home');
+// Route::get('/', function () {
+//     return view('home.index');
+// })->name('home');
+
+
+Route::get('/', [HomeController::class,'index'])->name('home');
+
 
 Auth::routes();
 
