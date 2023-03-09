@@ -27,6 +27,8 @@ use App\Http\Controllers\UserController;
 
 
 Route::get('/', [HomeController::class,'index'])->name('home');
+Route::get('/post/{type}', [HomeController::class,'alladds'])->name('home.categorypage');
+Route::get('/view-post/{id}', [HomeController::class,'show'])->name('home.showpage');
 
 
 Auth::routes();
