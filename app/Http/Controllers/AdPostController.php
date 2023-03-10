@@ -6,6 +6,8 @@ use App\Models\AdModel;
 use App\Models\AdPost;
 use App\Models\AdPostImage;
 use App\Models\Category;
+use App\Models\City;
+use App\Models\PostType;
 use Illuminate\Http\Request;
 
 class AdPostController extends Controller
@@ -41,6 +43,7 @@ class AdPostController extends Controller
         $data['page_slug'] = request()->route()->uri();
         $data['category'] = Category::get();
         $data['models'] = AdModel::get();
+        $data['city'] = City::get();
         $data['post'] = AdPost::where('user_id', auth()->user()->id)->get();
         return view('panel.adpost.index' , $data);
     }
@@ -48,7 +51,10 @@ class AdPostController extends Controller
     public function create(){
         $data['page_slug'] = 'ad-post';
         $data['category'] = Category::get();
+        $data['type'] = PostType::get();
+
         $data['models'] = AdModel::get();
+        $data['city'] = City::get();
         return view('panel.adpost.edit' , $data);
     }
 
@@ -71,10 +77,13 @@ class AdPostController extends Controller
         $adpost = AdPost::create([
             'user_id' => auth()->user()->id,
             'category_id' => $request->category,
-            'model_id' => $request->model,
+            'model' => $request->model,
             'title' => $request->title,
             'city' => $request->city,
             'area_name' => $request->area_name,
+            'price_per_day'=>$request->price_per_day,
+            'price_per_week'=>$request->price_per_week,
+            'price_per_month'=>$request->price_per_month,
             'type' => $request->type,
             'price' => $request->price,
             'description' => $request->description,

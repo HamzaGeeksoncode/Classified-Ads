@@ -23,12 +23,26 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-   
+
     public function index()
     {
-      
         $users = AdPost::limit(6)->get();
-    
         return view('home.index', compact('users'));
+    }
+
+    public function alladds($type)
+    {
+        if ($type != 'cars' && $type != 'bike'){
+            abort(404);
+        }else{
+            $users = AdPost::where('type', $type)->where('status', 'active')->get();
+            return view('home.categorypage', compact('users'));
+        }
+    }
+
+    public function show($id)
+    {
+        $post = AdPost::find($id);
+        return view('home.showpage', compact('post'));
     }
 }

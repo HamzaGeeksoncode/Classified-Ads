@@ -27,6 +27,8 @@ use App\Http\Controllers\UserController;
 
 
 Route::get('/', [HomeController::class,'index'])->name('home');
+Route::get('/post/{type}', [HomeController::class,'alladds'])->name('home.categorypage');
+Route::get('/view-post/{id}', [HomeController::class,'show'])->name('home.showpage');
 
 
 Auth::routes();
@@ -43,6 +45,7 @@ Route::middleware('auth')->group(function () {
     Route::post('/category', [CategoryController::class,'store'])->name('category.store');
     Route::get('/edit-category/{id}', [CategoryController::class,'edit'])->name('category.edit');
     Route::post('/update-category', [CategoryController::class,'update'])->name('category.update');
+    Route::get('/category-type/{id}', [CategoryController::class,'postType'])->name('post.type');
 
     Route::get('/models', [AdModelController::class,'index'])->name('models');
     Route::post('/models', [AdModelController::class,'store'])->name('models.store');

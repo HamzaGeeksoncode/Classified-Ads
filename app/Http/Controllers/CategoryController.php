@@ -40,4 +40,11 @@ class CategoryController extends Controller
             return redirect()->back();
         }
     }
+
+
+    public function postType($id)
+    {
+        $categoryBytype = Category::where('type_id', $id)->get();
+        return response()->json($categoryBytype);
+    }
 }

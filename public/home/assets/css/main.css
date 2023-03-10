@@ -211,8 +211,8 @@ body{
     color:#fff;
     padding:4px;
     position:fixed;
-    -webkit-transform:translate3d(0,0,9999 px);
-    -webkit-transform:translate3d(0,0,var(--toastify-z-index) px);
+    /* -webkit-transform:translate3d(0,0,9999 px);
+    -webkit-transform:translate3d(0,0,var(--toastify-z-index) px); */
     width:320px;
     width:var(--toastify-toast-width);
     z-index:9999;
@@ -6832,7 +6832,7 @@ textarea.form-control-lg{
     margin-left:-1.5em
 }
 .form-check-input{
-    -webkit-print-color-adjust:exact;
+    /* -webkit-print-color-adjust:exact; */
     -webkit-appearance:none;
     appearance:none;
     background-color:#fff;
@@ -6840,7 +6840,7 @@ textarea.form-control-lg{
     background-repeat:no-repeat;
     background-size:contain;
     border:1px solid rgba(0,0,0,.25);
-    color-adjust:exact;
+    /* color-adjust:exact; */
     height:1em;
     margin-top:.25em;
     vertical-align:top;
@@ -14261,7 +14261,7 @@ i.slider:after {
 
 .main-slider input:checked {
 	transform: translateX(0);
-	pointer-event: none;
+	/* pointer-event: none; */
 	z-index: 0;
 	box-shadow: -5px 10px 20px -15px rgba(0,0,0,1);
 }
@@ -14501,8 +14501,7 @@ a.tn-atom {
     gap: 50px;
 }
   
-.signup-box {
-}
+
   
 .ele {
     height: 50px;
