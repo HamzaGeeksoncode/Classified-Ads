@@ -45,6 +45,7 @@ Route::middleware('auth')->group(function () {
     Route::post('/category', [CategoryController::class,'store'])->name('category.store');
     Route::get('/edit-category/{id}', [CategoryController::class,'edit'])->name('category.edit');
     Route::post('/update-category', [CategoryController::class,'update'])->name('category.update');
+    Route::get('/category-type/{id}', [CategoryController::class,'postType'])->name('post.type');
 
     Route::get('/models', [AdModelController::class,'index'])->name('models');
     Route::post('/models', [AdModelController::class,'store'])->name('models.store');

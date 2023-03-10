@@ -34,7 +34,7 @@ class HomeController extends Controller
     {
         if ($type != 'cars' && $type != 'bike'){
             abort(404);
-        }else{              
+        }else{
             $users = AdPost::where('type', $type)->where('status', 'active')->get();
             return view('home.categorypage', compact('users'));
         }
