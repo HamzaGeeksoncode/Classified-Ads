@@ -117,7 +117,7 @@
                     <th>Model</th>
                     <th>City</th>
                     <th>Price</th>
-                    <th>Is Premium?</th>
+                    {{-- <th>Is Premium?</th> --}}
                     <th>Status</th>
                     <th>Action</th>
                 </tr>
@@ -132,12 +132,12 @@
                     <td>{{ $data->user->name }}</td>
                     @endhasrole
                     <td>{{ $data->title }}</td>
-                    <td>{{ $data->type }}</td>
+                    <td>{{ $data->type->name }}</td>
                     <td>{{ $data->category->name }}</td>
-                    <td>{{ $data->model->name }}</td>
-                    <td>{{ $data->city }}</td>
-                    <td>{{ $data->price }}</td>
-                    <td>{{ $data->is_primium }}</td>
+                    <td>{{ $data->model }}</td>
+                    <td>{{ $data->city->name }}</td>
+                    {{-- <td>{{ $data->is_primium }}</td> --}}
+                    <td>{{ $data->price_per_day }}</td>
                     <td>
                         @if ($data->status == 'pending')
                         <span class="badge badge-light-warning">Pending</span>

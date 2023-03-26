@@ -93,7 +93,7 @@
                             </label>
                             <!--end::Label-->
                             <!--begin::Input-->
-                            <select name="City" aria-label="Select a City" data-control="select2"
+                            <select name="city" aria-label="Select a City" data-control="select2"
                                 data-placeholder="Select a City..."
                                 class="form-select form-select-solid fw-bolder select2-hidden-accessible" tabindex="-1"
                                 aria-hidden="true">

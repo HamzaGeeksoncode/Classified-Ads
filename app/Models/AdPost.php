@@ -19,8 +19,12 @@ class AdPost extends Model
         return $this->belongsTo(Category::class);
     }
 
-    public function model(){
-        return $this->belongsTo(AdModel::class);
+    public function city(){
+        return $this->belongsTo(City::class);
+    }
+
+    public function type(){
+        return $this->belongsTo(PostType::class);
     }
 
 }
