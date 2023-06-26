@@ -36,20 +36,14 @@
                                             src="{{ asset('home/assets/images/logo.png') }}" alt="Site Logo"></a></div>
 
 
-                                <div class="search_fild">
-                                    <form class="d-flex">
-                                        <input placeholder="Search here..." aria-label="Search"
-                                            class="me-2 text-white form-control" value="">
-                                        <div class="serch_icon"><i class="fas fa-search" aria-hidden="true"></i></div>
-                                    </form>
-                                </div>
+
                             </div>
                         </div>
                         <div class="col-md-5 ">
                             <div class="menu_right">
                                 <a activeclassname="active" aria-current="page" class="f-m fw-bolder text-white active"
                                     href="#">Home</a><a href="#"><button class="f-m fw-bolder text-dark"
-                                        style="background: #dd5645;">Sell with us</button></a><a
+                                        style="background: #fcaf17;">Rent with us</button></a><a
                                     href="{{ route('login') }}"><button class="f-m fw-bolder">Login</button></a><a
                                     activeclassname="menu_active" class="f-m fw-bolder text-white"
                                     href="contact.html">Support</a>
@@ -66,131 +60,50 @@
                     <div class="row"></div>
                 </div>
             </div>
+            <div class="container">
+            <div class="MuiGrid-root MuiGrid-container MuiGrid-item MuiGrid-direction-xs-column MuiGrid-grid-xs-12 css-rjsjy0" style="background-size:cover;min-height:257px;border-radius:6px">
+   <h1 class="MuiTypography-root MuiTypography-h5 css-1px8evw" data-testid="hero-title">The best place to buy your house, sell your car or find a job in  Dubai</h1>
+   <div class="MuiBox-root css-1sido8c">
+      <div class="MuiBox-root css-70qvj9">
+         <span class="MuiTypography-root MuiTypography-body1 css-jiybmi">Searching in</span>
+         <div class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-1xbj0k1">
+            <div class="MuiBox-root css-ke5g6e"><button class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedError MuiButton-sizeMedium MuiButton-containedSizeMedium selected css-q27lq1" tabindex="0" type="button" data-testid="category-chip">All</button></div>
+            <div class="MuiBox-root css-ke5g6e"><button class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedInherit MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorInherit not-selected css-1hg58ln" tabindex="0" type="button" data-testid="category-chip">Cars</button></div>
+            <div class="MuiBox-root css-ke5g6e"><button class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedInherit MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorInherit not-selected css-1hg58ln" tabindex="0" type="button" data-testid="category-chip">yachts/jetski</button></div>
+            <div class="MuiBox-root css-ke5g6e"><button class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedInherit MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorInherit not-selected css-1hg58ln" tabindex="0" type="button" data-testid="category-chip">motorbikes</button></div>
 
 
-
-            <section class="main-cars">
-                <div class="container">
-                    <div class="me-0 row">
-                        <div class="col-md-5 col-xs-12">
-                            <div class="content-car">
-                                <h4>77first-class cars in our parkDaily rent luxury, sports, business cars for work and
-                                    leisure in Dubai</h4>
-                                <p>We meet from the airport when booking any car for <strong>3 days or more!</strong>
-                                </p>
-                            </div>
-                            <div class="car-buttons">
-                                <button class="btnn btn-1"><a href="#">Choose a car</a></button>
-                                <button class="btnn btn-2"><a href="#">Choose a bike</a></button>
-                            </div>
+         </div>
+      </div>
+      <div class="MuiGrid-root MuiGrid-container css-kcr3a5">
+         <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-10 css-1kijih2">
+            <form>
+               <div class="MuiAutocomplete-root MuiAutocomplete-hasPopupIcon css-id14lt">
+                  <div class="MuiBox-root css-0">
+                     <div class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-ocy3q4" data-testid="search-input">
+                        <div style="padding-left:16px;padding-right:16px" class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiAutocomplete-inputRoot css-18vx6wv">
+                           <input aria-invalid="false" autocomplete="off" id=":R9la6n4d6:" placeholder="Search for anything" type="text" class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputAdornedEnd MuiAutocomplete-input MuiAutocomplete-inputFocused css-1bjlmdj" aria-autocomplete="list" aria-expanded="false" autocapitalize="none" spellcheck="false" role="combobox" value=""><img class="MuiBox-root css-19rsff" alt="Search" src="https://dbzproperty-a.akamaihd.net/frontend-web/listings/assets/homepage/search.svg">
+                           <fieldset aria-hidden="true" class="MuiOutlinedInput-notchedOutline css-igs3ac">
+                              <legend class="css-hdw1oc"><span class="notranslate">&ZeroWidthSpace;</span></legend>
+                           </fieldset>
                         </div>
-                        <div class="col-md-7 col-xs-12">
-                            <div class="main-slider">
-                                <i class="slider">
-                                    <input checked type="radio" name="s"
-                                        style="background-image: url('home/assets/images/c1.jpg');">
-                                    <input type="radio" name="s"
-                                        style="background-image: url('home/assets/images/c2.jpg');">
-                                    <input type="radio" name="s"
-                                        style="background-image: url('home/assets/images/c3.jpg');">
-                                    <input type="radio" name="s"
-                                        style="background-image: url('home/assets/images/c4.jpg');">
-                                    <input type="radio" name="s"
-                                        style="background-image: url('home/assets/images/c5.jpg');">
-                                </i>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </section>
+                     </div>
+                  </div>
+               </div>
+            </form>
+         </div>
+         <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-md-2 css-11w2184"><button class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-nzmd8g" tabindex="0" type="button" data-testid="search-button">Search</button></div>
+      </div>
+   </div>
+</div>
 
 
-            <div class="bg-black shadow-ms border-bottom border-secondary   py-3 sticky-top">
-                <div class="container">
-                    <div class="me-0 row">
-                        <div class="col-md-5">
-                            <div
-                                class="p-2 d-flex flex-nowrap border border-secondary border-rounded align-items-center">
-                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24"
-                                    class="mx-1" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"
-                                    style="color: #dd5645;">
-                                    <path
-                                        d="M19.023 16.977a35.13 35.13 0 0 1-1.367-1.384c-.372-.378-.596-.653-.596-.653l-2.8-1.337A6.962 6.962 0 0 0 16 9c0-3.859-3.14-7-7-7S2 5.141 2 9s3.14 7 7 7c1.763 0 3.37-.66 4.603-1.739l1.337 2.8s.275.224.653.596c.387.363.896.854 1.384 1.367l1.358 1.392.604.646 2.121-2.121-.646-.604c-.379-.372-.885-.866-1.391-1.36zM9 14c-2.757 0-5-2.243-5-5s2.243-5 5-5 5 2.243 5 5-2.243 5-5 5z">
-                                    </path>
-                                </svg>
-                                <input class="w-100" type="search" placeholder="Search here..."
-                                    style="border: none; outline: none; color: rgb(0, 0, 0); background: rgb(255, 255, 255); border-radius: 2.5rem; padding: 4px 12px;">
-                            </div>
-                        </div>
 
-                        <div class="col-md-7">
-                            <div lang="en" class="sc-1ighvb1-0 fgWsuT sc-1ofz4w2-5 edxhXB">
-                                <div id="notification-bell" class="sc-1ofz4w2-7 hYdgKV">
-                                    <button data-testid="header-notification-icon" rel="nofollow"
-                                        class="sc-1fl7xgp-0 fnBhIh">
-                                        <div class="sc-1ofz4w2-1 oqDit"><img width="18" height="18"
-                                                src="https://dbzproperty-a.akamaihd.net/frontend-web/static-resources/assets/nav-icons/my-notifications.svg"
-                                                aria-label="Notifications" alt="Notifications" /></div>
-                                        <span class="sc-1ofz4w2-6 AUdcf">Notifications</span>
-                                    </button>
-                                </div>
-                                <div id="my-searches" class="sc-1ofz4w2-7 hYdgKV">
-                                    <button data-testid="header-savesearch-icon" rel="nofollow"
-                                        class="sc-1fl7xgp-0 fnBhIh">
-                                        <div class="sc-1ofz4w2-1 oqDit"><img width="18" height="18"
-                                                src="https://dbzproperty-a.akamaihd.net/frontend-web/static-resources/assets/nav-icons/my-searches.svg"
-                                                aria-label="Saved Searches" alt="Saved Searches" /></div>
-                                        <span class="sc-1ofz4w2-6 AUdcf">My Searches</span>
-                                    </button>
-                                </div>
-                                <div id="my-favorites" class="sc-1ofz4w2-7 hYdgKV">
-                                    <button data-testid="header-fav-icon" rel="nofollow" class="sc-1fl7xgp-0 fnBhIh">
-                                        <div class="sc-1ofz4w2-1 oqDit"><img width="18" height="18"
-                                                src="https://dbzproperty-a.akamaihd.net/frontend-web/static-resources/assets/nav-icons/my-favorites.svg"
-                                                aria-label="Favorites" alt="Favorites" /></div>
-                                        <span class="sc-1ofz4w2-6 AUdcf">Favorites</span>
-                                    </button>
-                                </div>
-                                <div id="sendbird_chat" class="sc-1ofz4w2-7 hYdgKV">
-                                    <button data-testid="header-chat-icon" rel="nofollow" class="sc-1fl7xgp-0 fnBhIh">
-                                        <div class="sc-1ofz4w2-1 oqDit"><img width="18" height="18"
-                                                src="https://dbzproperty-a.akamaihd.net/frontend-web/static-resources/assets/nav-icons/my-chats.svg"
-                                                aria-label="Chats" alt="Chats" /></div>
-                                        <span class="sc-1ofz4w2-6 AUdcf">Chats</span>
-                                    </button>
-                                </div>
-                                <div id="my-ads" class="sc-1ofz4w2-7 hYdgKV">
-                                    <button data-testid="header-ads-icon" rel="nofollow" class="sc-1fl7xgp-0 fnBhIh">
-                                        <div class="sc-1ofz4w2-1 oqDit">
-                                            <img width="18" height="18"
-                                                src="https://dbzproperty-a.akamaihd.net/frontend-web/static-resources/assets/nav-icons/my-ads.svg"
-                                                aria-label="My Ads" alt="My Ads" />
-                                            <img alt="New"
-                                                src="https://dbzproperty-a.akamaihd.net/frontend-web/static-resources/assets/nav-icons/new-badge.svg"
-                                                class="sc-1ofz4w2-2 cEAEso" />
-                                        </div>
-                                        <span class="sc-1ofz4w2-6 AUdcf">My Ads</span>
-                                    </button>
-                                </div>
-                                <!-- <a href="/user/auth?next=/en/?verify_flow=1" data-fnid="login_signup" class="sc-uo2hpw-0 eJTEjC sc-1g6t1fi-0 bFMIOA"><span>Log in or sign up</span></a> -->
-                                <div lang="en" class="sc-1ighvb1-0 ghunuv"><button data-fnid="place-an-ad"
-                                        data-testid="place-an-ad-button" class="sc-n1qdao-0 bcwAuy">Place Your
-                                        Ad</button></div>
-                            </div>
+</div>
 
-                        </div>
-                        <div class="mt-3 d-flex col-12" style="overflow: auto;"><button
-                                class="btn btn-outline-dark rounded fw-bold border border-secondary px-5 me-3"
-                                style="background: #dd5645; color: rgb(255, 255, 255); white-space: nowrap;">Cars</button><button
-                                class="btn rounded fw-bold border border-secondary px-5 me-3"
-                                style="background: transparent; color: white;">Bikes</button><button
-                                class="btn rounded fw-bold border border-secondary px-5 me-3"
-                                style="background: transparent; color: white; white-space: nowrap;">Filters</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
+
+
 
             @yield('content')
 
